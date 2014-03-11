@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
+		<meta name = "keywords" content= "Shunt, musica, rock">
+		<title> Shunt </title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		</script><!-- carga Jquery desde google -->
+		
+		<!-- Convertir en botones las cosas -->
+
+		<script language="javascript">
+			$(document).ready(function() {  
+			$(".Boton").click(function(){
+     		window.location=$(this).find("a").attr("href");
+     		return false;
+			});
+			});
+		</script>
+	
+
+		<!-- Mostrar y ocultar los div contents -->
+
+		<script>
+			$(document).ready(function(){
+			  $("#BotonMusica").click(function(){
+			    $(".contenidos").hide();
+			    $("#contentMusica").show();
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#BotonShows").click(function(){
+			    $(".contenidos").hide();
+			    $("#contentShows").show();
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#BotonGaleria").click(function(){
+			    $(".contenidos").hide();
+			    $("#contentGaleria").show();
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#BotonInfo").click(function(){
+			    $(".contenidos").hide();
+			    $("#contentInfo").show();
+			  });
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("#BotonHome").click(function(){
+			    $(".contenidos").hide();
+			    $("#contentHome").show();
+			  });
+			});
+		</script>
+		
+		<!--FancyBox-->
+
+		<link rel="stylesheet" type="text/css" href="jquery.fancybox.css" media="screen" />
+		
+		<script type="text/javascript" src="jquery.fancybox.js"></script>
+		<script type="text/javascript" src="jquery.fancybox-buttons.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.fancybox-buttons.css" media="screen" />
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+    			$(".fotoclick[rel=grupo_galeria]").fancybox({
+    				'transitionIn':'elastic',
+    				'transitionOut':'elastic',
+    			});	
+			});
+		</script>
+	</head>
+	<body>
+		<div id = "Content">
+
+		<!-- botones del menu -->
+
+			<div id = "Menu">
+ 					<div class="Boton" id= "BotonHome">
+ 						<img style="border:0" src="home.png" alt="Home"><a href="#"></a>
+ 					</div>
+					<div id="BotonMusica" class="Boton">
+ 						<img style="border:0" src="musica.png" alt="Musica"><a href="#"></a>
+					</div>
+					<div id= "BotonShows" class="Boton" >
+ 						<img style="border:0" src="shows.png" alt="En Vivo"><a href="#"></a>
+ 					</div>
+					<div class="Boton" id="BotonGaleria">
+ 						<img style="border:0" src="galeria.png" alt="Fotos"><a href="#"></a>
+					</div>
+					<div class="Boton" id= "BotonInfo">
+ 						<img style="border:0" src="info.png" alt="Info"><a href="#"></a>
+ 					</div>
+			</div>
+		</div>
+		
+		<!-- Divs de contents -->
+
+		<div id = "contentHome" class = "contenidos">
+			<p>Hola a todos </p>
+			<div id = "video">
+				<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/y5wa0w3iXFE" frameborder="0"></iframe>
+			</div>
+		</div>
+
+		<div id = "contentMusica" class = "contenidos">
+			<div id = "playlist">
+				<iframe id = "soundcloud" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1623426&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+			</div>
+			<img src="cd_atras.jpg" width="100%" height="450" alt="cd" usemap="#cdmap">
+			<map name="cdmap">
+			  <area shape="rect" coords="177,177,275,194" href='once.html' class ="popup">
+			  <area shape="rect" coords="178,198,276,217" href="evenFlow.htm" alt="evenFlow">
+			  <area shape="rect" coords="179,220,278,238" href="Alive.htm" alt="Alive">
+			</map>
+		</div>	
+		<div id = "contentShows" class = "contenidos">
+			<div id = "fechas">
+				<!--<div id="upto-calendar-container-nqWKKO" class="upto-calendar-plugin"><script>!function(c,b,a){function d(h){var e=document.getElementById("upto-calendar-container-"+c),f=document.createElement("SCRIPT"),g="http://upto.com/embed/js/embed.js";f.onreadystatechange=function(){if(f.readyState==="loaded"||f.readyState==="complete"){f.onreadystatechange=null;h()}};f.onload=function(){h()};f.setAttribute("src",g);e.parentNode.insertBefore(f,e)}d(function(){upto.init(c,b,a)})}("nqWKKO",["JCTO"],{"template":"2"});</script></div>-->
+				<img src="show1.jpg" width="400" height="200" alt="show1">
+			</div>
+		</div>	
+		<div id = "contentGaleria" class = "contenidos">
+				<div class = "foto">
+					<a rel ="grupo_galeria" href= "foto1.jpg" id="foto1" class ="fotoclick"><img width ="240" height= "192" src="foto1.jpg"></a>
+				</div>
+				<div class = "foto">
+					<a rel ="grupo_galeria" href="foto2.jpg" class= "fotoclick"><img width ="240" height= "192" src="foto2.jpg"></a>
+				</div>
+				<div class = "foto">
+					<a rel ="grupo_galeria" href ="foto3.jpg" class="fotoclick"><img width ="240" height= "192" src="foto3.jpg"></a>
+				</div>
+				<div class = "foto">
+					<a rel ="grupo_galeria" href="foto4.jpg" class = "fotoclick"><img width ="240" height= "192" src="foto4.jpg"></a>
+				</div>
+				<div class = "foto">
+					<a rel ="grupo_galeria" href ="foto5.jpg" class ="fotoclick"><img width ="240" height= "192" src="foto5.jpg"></a>
+				</div>
+				<div class = "foto">
+					<a rel ="grupo_galeria" href = "foto6.jpg" class ="fotoclick"><img width ="240" height= "192" src="foto6.jpg"></a>
+				</div>
+		</div>	
+		<div id = "contentInfo" class = "contenidos">
+			<p>Este es el content de Info </p>
+			<div id = "video">
+				<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/hTWKbfoikeg" frameborder="0"></iframe>
+			</div>
+		</div>
+	
+	</body>
+</html>
