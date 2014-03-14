@@ -10,8 +10,9 @@
 	display: inline-block;
 	margin: 10px 5px 0 5px;
 	vertical-align: top;
-	height: 250px;
+	height: 160px;
 }
+
 
 .og-grid li > a,
 .og-grid li > a img {
@@ -19,6 +20,11 @@
 	outline: none;
 	display: block;
 	position: relative;
+
+}
+
+.og-grid li > a:hover{
+	opacity: 0.4;
 }
 
 .og-grid li.og-expanded > a::after {
@@ -151,7 +157,7 @@
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: #ddd;
+	background: white;
 	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
 	position: absolute;
 	top: 50%;
